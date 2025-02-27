@@ -5,6 +5,17 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
+    ],
+    "headers": [
+      {
+        "source": "**/*.@(js|css|html|json|ico|png|jpg|jpeg|svg|gif|webp|woff|woff2|ttf|otf|eot|mp4|webm|ogg|mp3|wav|flac|aac|opus)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=31536000, immutable"
+          }
+        ]
+      }
     ]
   }
 }
